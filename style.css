@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*,*::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Oswald", sans-serif;
+}
+.body.no-scroll{
+    overflow: hidden;
+}
+.container{
+    padding: 37px 32px;
+    margin: 0 auto;
+    max-width: 1140px;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-header{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.burger-menu{
+    width: 39px;
+    cursor: pointer;
+    height: 27px;
+    position: absolute;
+    right: 24px;
+    display: none;
+    z-index: 100;
+}
+.burger-menu span{
+    width: 100%;
+    height: 5px;
+    background-color: #5E8D7C;
+    position: absolute;
+    transition: all .35s ease;
+}
+.burger-menu:hover span{
+    background-color: #436357;
+}
+.burger-menu span:first-child{
+    top: 0;
+}
+.burger-menu span:nth-child(2){
+    top: 9px;
+}
+.burger-menu span:last-child{
+    top: 18px
+}
+.burger-menu-close span{
+    margin: 0;
+}
+.burger-menu-close span:nth-child(2){
+    opacity: 0;
+}
+.burger-menu-close span:first-child{
+    transform: rotate(45deg);
+    top: 9px;
+}
+.burger-menu-close span:last-child{
+    transform: rotate(-45deg);
+    top: 9px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    z-index: 101;
+}
+.logo-link{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 36px;
+    color: #5E8D7C;
+    transition: all .35s ease;
+}
+.logo-link:hover{
+    color: #436357;
+}
+.menu-link{
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    font-size: 24px;
+    position: relative;
+}
+.menu-link::after{
+    content: '';
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    background-color: #5E8D7C;
+    bottom: -10%;
+    right: 50%;
+    transform: translateX(50%);
+    opacity: 0;
+    transition: all .35s ease;
+}
+.menu-link:hover::after{
+    opacity: 1;
+    width: 50%;
+}
+#home{
+    background: url(img/bg-header.jpg);
+    height: 622px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+#home h1{
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 500;
+    color: #81502C;
+    top: 292px;
+    position: absolute;
+}
+.section-header{
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 23px;
+}
+.content-box{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.content-box img{
+    max-width: 50%;
+}
+.content-box p{
+    font-weight: 300;
+    font-size: 20px;
+}
+#blog{
+    background-color: #EFEFEF;
+}
+.blog-box{
+    padding-bottom: 50px;
+}
+.cards-container{
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+}
+.card{
+    background-color: #ffffff;
+    max-width: 365px;
+    min-height: 474px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 22px;
+    text-decoration: none;
+    color: #000000;
+    -webkit-box-shadow: 0px 0px 15px -5px rgba(34, 60, 80, 0.25);
+    -moz-box-shadow: 0px 0px 15px -5px rgba(34, 60, 80, 0.25);
+    box-shadow: 0px 0px 15px -5px rgba(34, 60, 80, 0.25);
+    transition: all .35s ease;
+}
+.card:hover{
+    transform: translateY(-10px);
+    -webkit-box-shadow: 0px 5px 15px 10px rgba(34, 60, 80, 0.25);
+    -moz-box-shadow: 0px 5px 15px 10px rgba(34, 60, 80, 0.25);
+    box-shadow: 0px 5px 15px 10px rgba(34, 60, 80, 0.25);
+}
+.card-header{
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+.card:hover{
+    text-decoration: underline;
+}
+.card img{
+    margin-bottom: 25px;
+    width: 100%;
+}
+.card p{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: auto;
+}
+.works-box{
+    padding-bottom: 10px;
+}
+.copyright{
+    text-align: center;
+    padding: 21px 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        padding: 37px 20px;
+    }
+    .menu-header{
+        gap: 30px;
+    }
+    .content-box{
+        gap: 20px;
+    }
+    .content-box p{
+        font-size: 16px;
+    }
+    .cards-container{
+        gap: 20px;
+    }
+    .card{
+        padding: 10px 12px 20px 12px;
+        min-height: auto;
+    }
+    .card-header{
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .card img{
+        margin-bottom: 15px;
+    }
+    .card p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 654px) {
+    .container{
+        padding: 0;
+    }   
+    header{
+        padding: 37px 0;
+    }
+    .logo{
+        margin: 0 24px;
+    }
+    .logo-link{
+        font-size: 24px;
+    }
+    .menu-header{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        position: fixed;
+        top: -100vh;
+        padding-top: 150px;
+        height: 100vh;
+        width: 100%;
+        z-index: 100;
+        background: #ffffff;
+        transition: all .35s ease;
+    }
+    .burger-menu{
+        display: block;
+    }
+    .menu-header.menu-header-open{
+        display: flex;
+        top: 0;
+        transition: all .35s ease;
+    }
+    #home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #home h1{
+        font-size: 36px;
+        position: static;
+        text-align: center;
+    }
+    .section-header{
+        font-size: 28px;
+        margin: 34px auto;
+    }
+    .content-box{
+        margin: 0;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+    .content-box img{
+        max-width: 100%;
+    }
+    .content-box p{
+        font-weight: 300;
+        font-size: 20px;
+        padding: 0 24px;
+    }
+    .blog-box{
+        padding-top: 0.05px;
+    }
+    .cards-container{
+        flex-direction: column;
+        margin-top: 34px;
+
+    }
+    .card{
+        padding: 28px;
+        max-width: 100%;
+    }
+    .works-box{
+        padding-bottom: 0;
+    }
+    .copyright{
+        padding-top: 0;
+        padding-bottom: 34px;
+    }
+}
